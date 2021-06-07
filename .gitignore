@@ -1,0 +1,26 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/frontend/node_modules
+/backend/node_modules
+/build
+/dist
+
+*.class
+
+# Package Files #
+*.war
+*.ear
+*.iml
+/backend/api-test/.idea
+/backend/api-test/venv
+/backend/api-test/target
+/backend/api-test/log
+
+hs_err_pid*
+
+# Cypress Vidoes & snapshots
+.mp4
+.png
+frontend/cypress/screenshots
+frontend/cypress/videos

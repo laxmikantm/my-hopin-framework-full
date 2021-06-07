@@ -1,0 +1,10 @@
+    {
+      "id": 1,
+      "name": "Americas Inc.",
+      "employees": 10,
+      "contactInfo": {
+        "name": "John Smith",
+        "email": "jsmith@americasinc.com"
+      },
+      "size": "Small"
+    }

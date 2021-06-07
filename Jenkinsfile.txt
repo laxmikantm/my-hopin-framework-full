@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+      stages {
+        stage('One') {
+          steps {
+            cd backend
+          }
+          steps {
+            npm install && npm start
+        }
+      }
+      stage('Two') {
+          steps {
+            cd frontend
+          }
+          steps {
+            npm install && npm start
+          }
+      }
+      stage('Three') {
+              steps {
+                cd backend
+              }
+              steps {
+                mvn clean test
+              }
+          }
+      stage('Four') {
+            steps {
+              cd frontend
+            }
+            steps {
+              npm run pretest
+            }
+            steps {
+              npm run integration-test
+            }
+            steps {
+              npm run posttest
+            }
+        }
+}
